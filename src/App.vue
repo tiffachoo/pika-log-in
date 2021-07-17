@@ -1,26 +1,54 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<pikachu />
+	<div class="form-container">
+		<div class="input">
+			<label 
+				class="input-label"
+				for="user"
+			>
+				User name
+			</label>
+			<input 
+				id="user" 
+				class="input-control"
+				type="text"
+			>
+		</div>
+		<div class="input">
+			<label 
+				class="input-label"
+				for="password"
+			>
+				Password
+			</label>
+			<input 
+				id="password" 
+				class="input-control"
+				type="password"
+			>
+		</div>
+		<button 
+			aria-label="Log in"
+			class="button-circle"
+		>
+			<svg width="7px" height="20px" viewBox="0 0 7 20">
+				<polyline class="stroke button-circle-chevron" points="1.5,18.5 5.5,10 1.5,1.5 "/>
+			</svg>
+		</button>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Pikachu from '@/components/Pikachu.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		Pikachu
+	}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import 'styles/styles';
 </style>
